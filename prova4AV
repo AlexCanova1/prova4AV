@@ -1,0 +1,64 @@
+def numero_reverso(numero):
+    numero_str = str(numero)
+    reverso = numero_str[-1::-1]
+    return int(reverso)
+
+numero = int(input('Digite um número: '))
+reverso = numero_reverso(numero)
+print('O reverso de', numero, 'é', reverso)
+
+
+
+
+
+def contar_dígitos(numero):
+    numero_str = str(numero)
+    return len(numero_str)
+
+numero = int(input('Digite um número: '))
+quantidade_digitos = contar_dígitos(numero)
+print('O número', numero, 'tem', quantidade_digitos, 'dígitos.')
+
+
+
+
+
+def potencia(base, expoente):
+    resultado = 1
+    if expoente >= 0:
+        for _ in range(expoente):
+            resultado *= base
+    else:
+        for _ in range(-expoente):
+            resultado /= base
+    return resultado
+
+base = int(input('Digite a base (A): '))
+expoente = int(input('Digite o expoente (B): '))
+
+print('O resultado de', base, 'elevado a', expoente, 'é:', potencia(base, expoente))
+
+
+
+
+
+def maior(valor1, valor2, valor3, valor4, valor5):
+    
+    maior_valor = valor1
+    if valor2 > maior_valor:
+        maior_valor = valor2
+    if valor3 > maior_valor:
+        maior_valor = valor3
+    if valor4 > maior_valor:
+        maior_valor = valor4
+    if valor5 > maior_valor:
+        maior_valor = valor5
+    return maior_valor
+
+valor1 = int(input('Digite o primeiro valor: '))
+valor2 = int(input('Digite o segundo valor: '))
+valor3 = int(input('Digite o terceiro valor: '))
+valor4 = int(input('Digite o quarto valor: '))
+valor5 = int(input('Digite o quinto valor: '))
+
+print('O maior valor é: ', maior(valor1, valor2, valor3, valor4, valor5))
